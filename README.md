@@ -1,7 +1,6 @@
-## W4K E2E Test Automation Project (A.k.A WETA)
+## Krieger Test Challenge Automation Project (A.k.A TCAP)
 
-this project is running the automation tests for the W4K Platform
-
+This Project is ment to be used for the Live Coding Session Challenge for the Krieger Applicants
 
 ## Project Overview
 
@@ -30,19 +29,15 @@ new test cases fast and consistent
 ├── cucumber-html-report.js
 ├── cypress
 │ ├── config
-│ │ ├── dev.json
-│ │ └── qa.json
-│ ├── cucumber-json
+│ │ └── test.json
 │ ├── fixtures
 │ │ └── example.json
 │ ├── integration
-│ │ ├── login.page.feature
-│ │ ├── product.search.page.feature
+│ │ ├── main.page.feature
 │ │ └── step_definitions
-│ │     ├── common.js
-│ │     ├── login.page.js
-│ │     ├── product.details.page.js
-│ │     └── product.search.page.js
+│ │     ├── common.spec.js
+│ │     ├── main.page.spec.js
+│ │     └── search.page.spec.js
 │ ├── plugins
 │ │ └── index.js
 │ └── support
@@ -50,24 +45,29 @@ new test cases fast and consistent
 │     ├── helper.js
 │     ├── index.js
 │     ├── localization
-│     │ ├── english.json
 │     │ └── german.json
 │     ├── localization.js
 │     ├── logger.js
+│     ├── maps
+│     │ └── page.map.js
 │     ├── objects
 │     │ ├── locator.js
 │     │ └── wildcard.js
-│     ├── page.map.js
 │     ├── pages
 │     │ ├── Page.js
-│     │ ├── login.page.js
 │     │ ├── main.page.js
-│     │ ├── product.details.page.js
-│     │ └── product.search.page.js
+│     │ └── search.page.js
 │     └── scope.js
 ├── cypress.json
-└── package.json
-
+├── package-lock.json
+├── package.json
+└── reports
+    ├── cucumber-html
+    │ └── report.html
+    │     └── features
+    └── cucumber-json
+        ├── empty.cucumber.json
+        └── main.cucumber.json
 
 ```
 
@@ -110,8 +110,8 @@ npx cypress open
 npm based script commands
 
 ```bash
-npm run cy:silent-<env>
-npm run cy:editor-<env>
+npm run cy:silent-test
+npm run cy:editor-test
 ```
 
 env = see /cypress/config folder for possible env values. (without the file ending)

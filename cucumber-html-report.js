@@ -9,7 +9,7 @@ report.generate({
     launchReport: false,
     storeScreenshots: true,
     openReportInBrowser: true,
-    pageTitle: "W4K E2E Report",
+    pageTitle: "Krieger Test Challenge",
     displayDuration: true,
     metadata: {
         browser: {
