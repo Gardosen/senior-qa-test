@@ -1,6 +1,6 @@
 const {Then, When, Given} = require("cypress-cucumber-preprocessor/steps");
 
-Then(/^(?:I am|User is) on the (.* page)$/, function (pageDescription) {
+When(/^(?:I am|User is) on the (.* page)$/, function (pageDescription) {
     const url = cy.pageMap.getPageUrl(pageDescription);
     cy.url().should('include', url);
     cy.scope.currentPage = pageDescription;
@@ -12,6 +12,14 @@ When(/^I (?:reject|accept) the (cookie policy) by clicking the (save settings bu
     cy.helper.clickElement(button);
 });
 
+When(/^I click the (.*)$/, function (button) {
+    cy.helper.clickElement(button);
+});
+
 Given(/^User goes to the (.*)$/, function(pageDescription) {
     cy.helper.goto(pageDescription);
 });
+
+
+
+

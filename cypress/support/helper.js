@@ -19,6 +19,10 @@ cy.helper.clickElement = (selectorIdentifier) => {
     cy.helper.getElement(selectorIdentifier).click();
 }
 
+cy.helper.select = (selectionElement, selectorIdentifier) => {
+    cy.helper.getElement(selectorIdentifier).select(selectionElement);
+}
+
 cy.helper.getElement = (selectorIdentifier) => {
     const selectorObject = cy.scope.currentPageObject.selectors[selectorIdentifier];
     if(selectorObject === undefined) {

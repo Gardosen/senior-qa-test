@@ -10,7 +10,7 @@ class MainPage extends Page {
         'search input field': new Locator('xpath', '//*[@id="searchFieldInputId"]'),
         'cookie policy': new Locator('xpath', '//*[@id="responsive"]/div[15]/div'),
         'accept all cookies button': new Locator('xpath', '//*[@id="responsive"]/div[15]/div/div/div[2]/div[2]'),
-        'save settings button': new Locator('xpath', '//*[@id="responsive"]/div[15]/div/div/div[2]/div[1]/button'),
+        'save settings button': new Locator('xpath', '//*[@id="responsive"]/div[15]/div/div/div[2]/div[1]/button')
     }
 }
 

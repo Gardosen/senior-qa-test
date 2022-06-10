@@ -6,12 +6,14 @@
  */
 const MainPage = require('../pages/main.page');
 const SearchPage = require('../pages/search.page');
+const RegistrationPage = require('../pages/registration.page');
 
 cy.pageMap = {};
 
 const PAGEMAP = {
     'main page': MainPage,
     'search page': SearchPage,
+    'registration page': RegistrationPage
 }
 
 cy.pageMap.getPageUrl = (pageDescription) => {
