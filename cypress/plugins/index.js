@@ -22,6 +22,6 @@ module.exports = (on, config) => {
 
     // accept a configFile value or use development by default
     console.log("DEBUG",`loading env file ${config.env.configFile}`)
-    const file = config.env.configFile || 'dev'
+    const file = config.env.configFile || 'test'
     return getConfigurationByFile(file)
 }
